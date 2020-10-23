@@ -1,0 +1,39 @@
+.cars-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 94px;
+  z-index: 11;
+}
+.cars-item {
+  width: 505px;
+  height: 257px;
+  margin: 30px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 24px;
+  @include webkit(box-shadow, 0 0 18px 0 rgba($color: #000000, $alpha: .2));
+  @include webkit(box-sizing, border-box);
+  header {
+    display: flex;
+    h4, p {
+      flex: 1;
+    }
+  }
+}
+.cars-logo img {
+  display: inline-block;
+  height: 34px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.cars-logo span {
+  color: #34393f;
+  font-size: 16px;
+}
+.attr {
+  color: rgba($color: #34393f, $alpha: .5);
+  font-size: 14px;
+  line-height: 34px;
+  text-align: right;
+}

@@ -1,0 +1,15 @@
+@import "./normalize.scss";
+@import "./sassConfig.scss";
+
+i[class^=icon] { // 获取类名以icon开头的元素
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $color-main;
+  background-repeat: no-repeat;
+}
+.icon-help { background: url(~@/assets/img/icon/icon-help.png); }
+.icon-search { background: url(~@/assets/img/icon/icon-search.png); }
+.icon-location { background: url(~@/assets/img/icon/icon-location.png); }
+.icon-user { background: url(~@/assets/img/icon/icon-user.png); }
