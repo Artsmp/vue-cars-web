@@ -27,16 +27,7 @@ export default {};
     margin: 0 17px;
     cursor: pointer;
   }
-  .select-car-btn {
-    display: inline-block;
-    width: 238px;
-    border-radius: 84px;
-    background-color: $color-main;
-    color: #fefefe;
-    line-height: 84px;
-    text-align: center;
-    font-size: 26px;
-  }
+  
   .icon {
     vertical-align: middle;
   }

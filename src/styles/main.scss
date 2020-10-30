@@ -1,7 +1,13 @@
 @import "./normalize.scss";
 @import "./sassConfig.scss";
 
-i[class^=icon] { // 获取类名以icon开头的元素
+html,
+body {
+  // cursor: default;
+}
+
+i[class^=icon] {
+  // 获取类名以icon开头的元素
   display: inline-block;
   width: 44px;
   height: 44px;
@@ -9,7 +15,64 @@ i[class^=icon] { // 获取类名以icon开头的元素
   background-color: $color-main;
   background-repeat: no-repeat;
 }
-.icon-help { background: url(~@/assets/img/icon/icon-help.png); }
-.icon-search { background: url(~@/assets/img/icon/icon-search.png); }
-.icon-location { background: url(~@/assets/img/icon/icon-location.png); }
-.icon-user { background: url(~@/assets/img/icon/icon-user.png); }
+
+.icon-help {
+  background: url(~@/assets/img/icon/icon-help.png);
+}
+
+.icon-search {
+  background: url(~@/assets/img/icon/icon-search.png);
+}
+
+.icon-location {
+  background: url(~@/assets/img/icon/icon-location.png);
+}
+
+.icon-user {
+  background: url(~@/assets/img/icon/icon-user.png);
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.p-r {
+  position: relative;
+}
+
+.p-a {
+  position: absolute;
+}
+
+.color-main {
+  color: $color-main;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// common ui
+.select-car-btn {
+  display: inline-block;
+  width: 238px;
+  border-radius: 84px;
+  background-color: $color-main;
+  color: #fefefe;
+  line-height: 84px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+}

@@ -1,29 +1,49 @@
 <template>
-  <div class="cars-wrap">
-    <section class="cars-item">
-      <header>
-        <h4 class="cars-logo">
-          <img src="../../assets/img/cars-logo.png" alt="">
-          <span>Mustang 2019款</span>
-        </h4>
-        <p class="attr">新能源汽车  5座</p>
-      </header>
-      <div class="cars-content"></div>
-      <footer></footer>
-    </section>
-    <span @click="test">汽车列表</span>
+  <div class="cars-wrap"> 
+      <swiper class="swiper" ref="mySwiper" :options="swiperOption" style="padding: 20px;">
+        <swiper-slide :key="1"><carItem height="820px" /></swiper-slide>
+        <swiper-slide :key="2"><carItem /></swiper-slide>
+        <swiper-slide :key="3"><carItem /></swiper-slide>
+        <swiper-slide :key="4"><carItem /></swiper-slide>
+        <swiper-slide :key="5"><carItem /></swiper-slide>
+        <swiper-slide :key="6"><carItem /></swiper-slide>
+      </swiper>
+      <div class="swiper-button-prev" slot="button-prev" @click="prev"></div>
+      <div class="swiper-button-next" slot="button-next" @click="next"></div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'Cars',
-    methods: {
-      test() {
-        this.$router.push('/user')
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
+import carItem from "@/components/carItem";
+export default {
+  name: "Cars",
+  components: { Swiper, SwiperSlide, carItem },
+  data() {
+    return {
+      swiperOption: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
       }
+    };
+  },
+  directive: {
+    swiper: directive
+  },
+  methods: {
+    prev() {
+      this.$refs.mySwiper.$swiper.slidePrev();
+    },
+    next() {
+      this.$refs.mySwiper.$swiper.slideNext();
     },
   }
+};
 </script>
 
 <style lang="scss" scoped>
